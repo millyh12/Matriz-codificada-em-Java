@@ -1,0 +1,26 @@
+import javax.swing.JOptionPane;
+
+public class NewClass{
+    public static void main(String[] args) {
+         //Declarando variante
+        double mat [][] = new double[3][3];
+        int linha, coluna, soma = 0;
+        //entradas de dados da matriz
+         JOptionPane.showMessageDialog(null, "inserindo os dados na matriz");
+         //iniciando
+        for (linha = 0; linha < 3; linha++) {
+            for (coluna = 0; coluna < 3; coluna++) {
+          mat [linha][coluna] = Double.parseDouble(JOptionPane.showInputDialog("insira a matriz desejada: [" + linha + "][" + coluna + "]da matriz"));
+                  }//fim do for                         
+        }//fim do for
+        //calculo da soma
+        JOptionPane.showMessageDialog(null, "resultados da soma de matriz:");
+            for (linha = 0; linha < 3; linha++) {
+              for (coluna = 0; coluna < 3; coluna++) {
+                soma += linha + coluna; 
+            }
+         }
+          JOptionPane.showMessageDialog(null, "a soma da matriz é:" + soma);
+
+    }
+}
